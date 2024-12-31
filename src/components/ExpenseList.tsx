@@ -1,8 +1,9 @@
 import { format } from 'date-fns';
 import { Trash } from 'lucide-react';
 import { Button } from './ui/button';
-import { Expense } from '@/context/budget';
+import { Expense } from '@/lib/schema';
 import { useBudget } from '@/context/use-budget';
+import { useMemo } from 'react';
 
 type ExpenseListProps = {
 	budgetId: string;
@@ -11,6 +12,11 @@ type ExpenseListProps = {
 
 export default function ExpenseList({ expenses, budgetId }: ExpenseListProps) {
 	const { dispatch } = useBudget();
+	const sortedExpenses = useMemo(
+		() => expenses.sort((a, b) => b.date.getTime() - a.date.getTime()),
+		[expenses]
+	);
+
 	const removeBudgetButton = (
 		<Button
 			variant="destructive"
@@ -35,7 +41,7 @@ export default function ExpenseList({ expenses, budgetId }: ExpenseListProps) {
 	return (
 		<div>
 			<ul className="space-y-4">
-				{expenses.map((expense) => (
+				{sortedExpenses.map((expense) => (
 					<li
 						key={expense.id}
 						className="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-4 rounded-lg shadow-md"
