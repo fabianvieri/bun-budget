@@ -1,6 +1,9 @@
 import { createContext } from 'react';
 import { Budget } from '@/lib/schema';
 import { BudgetAction } from './action';
+// import reducer from './reducer';
+
+// type reducerTyoe = ReturnType<typeof reducer>;
 
 type BudgetContextValue = {
 	budgets: Budget[];

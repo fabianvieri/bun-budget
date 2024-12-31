@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { Trash } from 'lucide-react';
 import { Button } from './ui/button';
 import { Expense } from '@/lib/schema';
-import { useBudget } from '@/context/budget/use-budget';
+import { useBudget } from '@/context/budget/useBudget';
 import { useMemo } from 'react';
 
 type ExpenseListProps = {

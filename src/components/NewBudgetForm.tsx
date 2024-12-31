@@ -13,7 +13,7 @@ import AlertForm from './AlertForm';
 import SubmitButton from './SubmitButton';
 import { Input } from '@/components/ui/input';
 
-import { useBudget } from '@/context/budget/use-budget';
+import { useBudget } from '@/context/budget/useBudget';
 import { createBudgetSchema, createBudgetValues } from '../lib/schema';
 
 export default function NewBudgetForm() {
