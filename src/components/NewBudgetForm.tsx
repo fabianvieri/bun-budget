@@ -14,7 +14,7 @@ import SubmitButton from './SubmitButton';
 import { Input } from '@/components/ui/input';
 
 import { useBudget } from '@/context/use-budget';
-import { createBudgetSchema, createBudgetValues } from '../lib/validations';
+import { createBudgetSchema, createBudgetValues } from '../lib/schema';
 
 export default function NewBudgetForm() {
 	const { budgets, dispatch } = useBudget();

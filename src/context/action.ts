@@ -1,4 +1,4 @@
-import { Budget, Expense } from './budget';
+import { Budget, Expense } from '@/lib/schema';
 
 type AddBudgetAction = {
 	type: 'ADD_BUDGET';

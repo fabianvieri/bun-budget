@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
-
-import { Budget, UNCATEGORIZED_BUDGET_ID } from './budget';
+import { Budget } from '@/lib/schema';
 import { BudgetAction } from './action';
+import { UNCATEGORIZED_BUDGET_ID } from './budget';
 
 const reducer = (state: Budget[], action: BudgetAction) => {
 	const { type, payload } = action;
@@ -18,22 +18,26 @@ const reducer = (state: Budget[], action: BudgetAction) => {
 			];
 		}
 		case 'ADD_EXPENSE': {
-			const budgets = [...state];
-			const isExists = budgets.find((b) => b.id === payload.budgetId);
+			const budgetExists = state.find((b) => b.id === payload.budgetId);
 
-			if (!isExists && payload.budgetId !== UNCATEGORIZED_BUDGET_ID)
+			if (!budgetExists && payload.budgetId !== UNCATEGORIZED_BUDGET_ID)
 				return state;
 
-			if (!isExists && payload.budgetId === UNCATEGORIZED_BUDGET_ID) {
-				budgets.push({
-					id: UNCATEGORIZED_BUDGET_ID,
-					name: 'Uncategorized',
-					maximumSpending: '',
-					expenses: [],
-				});
+			let updatedState = state;
+
+			if (!budgetExists && payload.budgetId === UNCATEGORIZED_BUDGET_ID) {
+				updatedState = [
+					...state,
+					{
+						id: UNCATEGORIZED_BUDGET_ID,
+						name: 'Uncategorized',
+						maximumSpending: '',
+						expenses: [],
+					},
+				];
 			}
 
-			const newBudgets = budgets.map((b) => {
+			return updatedState.map((b) => {
 				if (b.id === payload.budgetId) {
 					const newBudget = {
 						...b,
@@ -43,29 +47,23 @@ const reducer = (state: Budget[], action: BudgetAction) => {
 				}
 				return b;
 			});
-			return newBudgets;
 		}
 		case 'REMOVE_BUDGET':
 			return state.filter((b) => b.id !== payload.budgetId);
 		case 'REMOVE_EXPENSE': {
-			const budgets = [...state];
-			const isExists = budgets.find((b) => b.id === payload.budgetId);
+			const budgetExists = state.find((b) => b.id === payload.budgetId);
 
-			if (!isExists) return state;
+			if (!budgetExists) return state;
 
-			const newBudgets = budgets.map((b) => {
+			return state.map((b) => {
 				if (b.id === payload.budgetId) {
-					const newExpenses = [...b.expenses].filter(
-						(e) => e.id !== payload.expenseId
-					);
 					return {
 						...b,
-						expenses: newExpenses,
+						expenses: b.expenses.filter((e) => e.id !== payload.expenseId),
 					};
 				}
 				return b;
 			});
-			return newBudgets;
 		}
 		default:
 			return state;

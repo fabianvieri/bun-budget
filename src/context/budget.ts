@@ -1,20 +1,6 @@
 import { createContext } from 'react';
+import { Budget } from '@/lib/schema';
 import { BudgetAction } from './action';
-
-export type Expense = {
-	id: string;
-	date: Date;
-	amount: string;
-	budgetId: string;
-	description: string;
-};
-
-export type Budget = {
-	id: string;
-	name: string;
-	maximumSpending: string;
-	expenses: Expense[];
-};
 
 type BudgetContextValue = {
 	budgets: Budget[];

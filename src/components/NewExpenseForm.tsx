@@ -20,7 +20,7 @@ import { Input } from '@/components/ui/input';
 import AlertForm from './AlertForm';
 import SubmitButton from './SubmitButton';
 import { useBudget } from '@/context/use-budget';
-import { createExpenseSchema, createExpenseValues } from '../lib/validations';
+import { createExpenseSchema, createExpenseValues } from '../lib/schema';
 import { DatePicker } from './ui/date-picker';
 import { UNCATEGORIZED_BUDGET_ID } from '@/context/budget';
 
