@@ -1,6 +1,6 @@
 import Header from './components/Header';
 import BudgetList from './components/BudgetList';
-import BudgetProvider from './context/BudgetProvider';
+import BudgetProvider from './context/budget/BudgetProvider';
 
 function App() {
 	return (

@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid';
 import { Budget } from '@/lib/schema';
 import { BudgetAction } from './action';
-import { UNCATEGORIZED_BUDGET_ID } from './budget';
+import { UNCATEGORIZED_BUDGET_ID } from '.';
 
 const reducer = (state: Budget[], action: BudgetAction) => {
 	const { type, payload } = action;

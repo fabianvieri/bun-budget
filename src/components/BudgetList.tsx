@@ -1,6 +1,6 @@
 import BudgetItem from './BudgetItem';
 import TotalBudget from './TotalBudget';
-import { useBudget } from '@/context/use-budget';
+import { useBudget } from '@/context/budget/use-budget';
 import { UNCATEGORIZED_BUDGET_ID } from '@/context/budget';
 import UncategorizedBudgetItem from './UncategorizedBudgetItem';
 

@@ -3,7 +3,7 @@ import NewExpenseForm from './NewExpenseForm';
 import ExpenseList from './ExpenseList';
 import { Card, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { currencyFormatter } from '@/lib/utils';
-import { useBudget } from '@/context/use-budget';
+import { useBudget } from '@/context/budget/use-budget';
 import { UNCATEGORIZED_BUDGET_ID } from '@/context/budget';
 
 export default function UncategorizedBudgetItem() {

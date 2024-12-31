@@ -1,6 +1,6 @@
 import { PropsWithChildren, useReducer } from 'react';
 import reducer from './reducer';
-import { BudgetContext } from './budget';
+import { BudgetContext } from '.';
 
 const BudgetProvider = ({ children }: PropsWithChildren) => {
 	const [budgets, dispatch] = useReducer(reducer, []);
