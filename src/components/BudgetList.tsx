@@ -1,4 +1,4 @@
-import BudgeItem from './BudgetItem';
+import BudgetItem from './BudgetItem';
 import TotalBudget from './TotalBudget';
 import { useBudget } from '@/context/use-budget';
 import { UNCATEGORIZED_BUDGET_ID } from '@/context/budget';
@@ -13,9 +13,15 @@ export default function BudgetList() {
 	return (
 		<div className="container mx-auto my-5 p-3 sm:p-0">
 			<div className="flex flex-col gap-4">
-				{categorizedBudgets.map((budget) => (
-					<BudgeItem key={budget.id} {...budget} />
-				))}
+				{categorizedBudgets.length === 0 ? (
+					<p className="text-center text-primary mt-2">
+						No budgets available. Please add a budget to get started.
+					</p>
+				) : (
+					categorizedBudgets.map((budget) => (
+						<BudgetItem key={budget.id} {...budget} />
+					))
+				)}
 				<UncategorizedBudgetItem />
 				<TotalBudget />
 			</div>

@@ -10,10 +10,10 @@ import { Progress } from './ui/progress';
 import ExpenseList from './ExpenseList';
 import ModalButton from './ModalButton';
 import NewExpenseForm from './NewExpenseForm';
-import { Budget } from '@/context/budget';
+import { Budget } from '@/lib/schema';
 import { currencyFormatter } from '@/lib/utils';
 
-export default function BudgeItem({
+export default function BudgetItem({
 	name,
 	maximumSpending,
 	expenses,
