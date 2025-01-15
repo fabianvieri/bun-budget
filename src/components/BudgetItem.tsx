@@ -5,7 +5,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from './ui/card';
-import { Badge } from './ui/badge';
 import { Progress } from './ui/progress';
 import ExpenseList from './ExpenseList';
 import ModalButton from './ModalButton';
@@ -29,11 +28,13 @@ export default function BudgetItem({
 		100
 	);
 
+	const isOverBudget = totalExpenses > Number(maximumSpending);
+
 	return (
-		<Card className="relative">
+		<Card className={`relative ${isOverBudget ? 'bg-destructive/40' : ''}`}>
 			<CardHeader>
 				<div className="flex justify-between">
-					<div>
+					<div className="flex gap-2">
 						<CardTitle className="text-xl">{name}</CardTitle>
 					</div>
 					<div className="flex items-center gap-1">
@@ -51,11 +52,6 @@ export default function BudgetItem({
 				<Progress value={percentage} />
 			</CardContent>
 			<CardFooter className="flex justify-between items-center">
-				<div>
-					{totalExpenses > Number(maximumSpending) && (
-						<Badge variant="destructive">overbudget</Badge>
-					)}
-				</div>
 				<div className="flex gap-2">
 					<ModalButton
 						buttonText="Add Expense"

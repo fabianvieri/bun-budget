@@ -12,7 +12,7 @@ export default function BudgetList() {
 
 	return (
 		<div className="container mx-auto my-5 p-3 sm:p-0">
-			<div className="flex flex-col gap-4">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 				{budgets.length === 0 ? (
 					<p className="text-center text-primary mt-2">
 						No budgets available. Please add a budget to get started.

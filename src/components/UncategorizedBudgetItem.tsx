@@ -29,8 +29,8 @@ export default function UncategorizedBudgetItem() {
 					</span>
 				</div>
 			</CardHeader>
-			<CardFooter>
-				<div className="ml-auto flex gap-2">
+			<CardFooter className="">
+				<div className="mr-auto flex gap-2">
 					<ModalButton
 						buttonText="Add Expense"
 						title="New Expense"
