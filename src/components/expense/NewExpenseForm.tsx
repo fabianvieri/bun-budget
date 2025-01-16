@@ -17,11 +17,11 @@ import {
 	SelectValue,
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
-import AlertForm from './AlertForm';
-import SubmitButton from './SubmitButton';
+import AlertForm from '../ui/AlertForm';
+import SubmitButton from '../ui/SubmitButton';
 import { useBudget } from '@/context/budget/useBudget';
-import { createExpenseSchema, createExpenseValues } from '../lib/schema';
-import { DatePicker } from './ui/date-picker';
+import { createExpenseSchema, createExpenseValues } from '../../lib/schema';
+import { DatePicker } from '../ui/date-picker';
 import { UNCATEGORIZED_BUDGET_ID } from '@/context/budget';
 
 type NewExpenseProps = {

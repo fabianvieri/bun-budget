@@ -1,5 +1,5 @@
-import { Progress } from './ui/progress';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Progress } from '../ui/progress';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { currencyFormatter } from '@/lib/utils';
 import { useBudget } from '@/context/budget/useBudget';
 

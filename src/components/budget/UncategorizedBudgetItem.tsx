@@ -1,7 +1,7 @@
-import ModalButton from './ModalButton';
-import NewExpenseForm from './NewExpenseForm';
-import ExpenseList from './ExpenseList';
-import { Card, CardFooter, CardHeader, CardTitle } from './ui/card';
+import ModalButton from '../ui/ModalButton';
+import NewExpenseForm from '../expense/NewExpenseForm';
+import ExpenseList from '../expense/ExpenseList';
+import { Card, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { currencyFormatter } from '@/lib/utils';
 import { useBudget } from '@/context/budget/useBudget';
 import { UNCATEGORIZED_BUDGET_ID } from '@/context/budget';

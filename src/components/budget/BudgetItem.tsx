@@ -4,11 +4,11 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from './ui/card';
-import { Progress } from './ui/progress';
-import ExpenseList from './ExpenseList';
-import ModalButton from './ModalButton';
-import NewExpenseForm from './NewExpenseForm';
+} from '../ui/card';
+import { Progress } from '../ui/progress';
+import ExpenseList from '../expense/ExpenseList';
+import ModalButton from '../ui/ModalButton';
+import NewExpenseForm from '../expense/NewExpenseForm';
 import { Budget } from '@/lib/schema';
 import { currencyFormatter } from '@/lib/utils';
 

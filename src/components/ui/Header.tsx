@@ -1,6 +1,6 @@
 import ModalButton from './ModalButton';
-import NewBudgetForm from './NewBudgetForm';
-import NewExpenseForm from './NewExpenseForm';
+import NewBudgetForm from '../budget/NewBudgetForm';
+import NewExpenseForm from '../expense/NewExpenseForm';
 
 export default function Header() {
 	return (

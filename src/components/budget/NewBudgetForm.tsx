@@ -9,12 +9,12 @@ import {
 	FormLabel,
 	FormMessage,
 } from '@/components/ui/form';
-import AlertForm from './AlertForm';
-import SubmitButton from './SubmitButton';
+import AlertForm from '../ui/AlertForm';
+import SubmitButton from '../ui/SubmitButton';
 import { Input } from '@/components/ui/input';
 
 import { useBudget } from '@/context/budget/useBudget';
-import { createBudgetSchema, createBudgetValues } from '../lib/schema';
+import { createBudgetSchema, createBudgetValues } from '../../lib/schema';
 
 export default function NewBudgetForm() {
 	const { budgets, dispatch } = useBudget();

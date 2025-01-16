@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import type { VariantProps } from 'class-variance-authority';
-import { Button } from './ui/button';
+import { Button } from './button';
 import {
 	Dialog,
 	DialogContent,
@@ -8,7 +8,7 @@ import {
 	DialogHeader,
 	DialogTitle,
 	DialogTrigger,
-} from './ui/dialog';
+} from './dialog';
 
 type ModalButtonProps = PropsWithChildren<{
 	buttonText: string;
