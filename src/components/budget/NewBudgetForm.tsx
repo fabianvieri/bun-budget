@@ -53,6 +53,7 @@ export default function NewBudgetForm() {
 	return (
 		<Form {...form}>
 			<form
+				name="budgetForm"
 				className="space-y-4"
 				onSubmit={handleSubmit(createBudget)}
 				noValidate

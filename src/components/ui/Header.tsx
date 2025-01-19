@@ -2,12 +2,16 @@ import ModalButton from './ModalButton';
 import NewBudgetForm from '../budget/NewBudgetForm';
 import NewExpenseForm from '../expense/NewExpenseForm';
 
-export default function Header() {
+type HeaderProps = {
+	title: string;
+};
+
+export default function Header({ title }: HeaderProps) {
 	return (
 		<header className="p-3 shadow-md">
 			<div className="container mx-auto flex justify-between items-center">
 				<h1 className="text-2xl font-bold text-destructive">
-					<a href="/">Budgets</a>
+					<a href="/">{title}</a>
 				</h1>
 				<div className="space-x-2">
 					<ModalButton

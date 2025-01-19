@@ -6,7 +6,7 @@ function App() {
 	return (
 		<main>
 			<BudgetProvider>
-				<Header />
+				<Header title="Budget" />
 				<BudgetList />
 			</BudgetProvider>
 		</main>
