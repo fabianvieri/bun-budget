@@ -1,7 +1,7 @@
-import { Progress } from "../ui/progress"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
-import { currencyFormatter } from "@/lib/utils"
 import { useBudget } from "@/context/budget/useBudget"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Progress } from "@/components/ui/progress"
+import { currencyFormatter } from "@/lib/utils"
 
 export default function TotalBudget() {
   const { budgets } = useBudget()

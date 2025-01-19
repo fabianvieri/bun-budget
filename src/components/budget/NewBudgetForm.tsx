@@ -1,6 +1,8 @@
-import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
 
+import { useBudget } from "@/context/budget/useBudget"
+import AlertForm from "@/components/ui/AlertForm"
 import {
   Form,
   FormControl,
@@ -9,12 +11,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import AlertForm from "../ui/AlertForm"
-import SubmitButton from "../ui/SubmitButton"
 import { Input } from "@/components/ui/input"
-
-import { useBudget } from "@/context/budget/useBudget"
-import { createBudgetSchema, createBudgetValues } from "../../lib/schema"
+import SubmitButton from "@/components/ui/SubmitButton"
+import { createBudgetSchema, createBudgetValues } from "@/lib/schema"
 
 export default function NewBudgetForm() {
   const { budgets, dispatch } = useBudget()

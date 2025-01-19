@@ -1,5 +1,5 @@
-import Header from "./components/ui/Header"
 import BudgetList from "./components/budget/BudgetList"
+import Header from "./components/ui/Header"
 import BudgetProvider from "./context/budget/BudgetProvider"
 
 function App() {

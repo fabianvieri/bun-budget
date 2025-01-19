@@ -1,6 +1,7 @@
+import NewBudgetForm from "@/components/budget/NewBudgetForm"
+import NewExpenseForm from "@/components/expense/NewExpenseForm"
+
 import ModalButton from "./ModalButton"
-import NewBudgetForm from "../budget/NewBudgetForm"
-import NewExpenseForm from "../expense/NewExpenseForm"
 
 type HeaderProps = {
   title: string

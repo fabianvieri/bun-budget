@@ -1,9 +1,11 @@
 import { PropsWithChildren } from "react"
-import reducer from "./reducer"
-import { BudgetContext } from "."
-import { Budget } from "@/lib/schema"
-import { BudgetAction } from "./action"
+
 import useLocalStorage from "@/hooks/useLocalStorage"
+import { Budget } from "@/lib/schema"
+
+import { BudgetContext } from "."
+import { BudgetAction } from "./action"
+import reducer from "./reducer"
 
 const BudgetProvider = ({ children }: PropsWithChildren) => {
   const [budgets, dispatch] = useLocalStorage<Budget[], BudgetAction>(

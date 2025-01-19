@@ -1,7 +1,8 @@
+import { UNCATEGORIZED_BUDGET_ID } from "@/context/budget"
+import { useBudget } from "@/context/budget/useBudget"
+
 import BudgetItem from "./BudgetItem"
 import TotalBudget from "./TotalBudget"
-import { useBudget } from "@/context/budget/useBudget"
-import { UNCATEGORIZED_BUDGET_ID } from "@/context/budget"
 import UncategorizedBudgetItem from "./UncategorizedBudgetItem"
 
 export default function BudgetList() {

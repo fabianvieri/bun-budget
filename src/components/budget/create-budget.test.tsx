@@ -1,9 +1,10 @@
-import { describe, it, expect } from "bun:test"
-import userEvent from "@testing-library/user-event"
 import { render, screen, within } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
+import { describe, expect, it } from "bun:test"
+
+import BudgetProvider from "@/context/budget/BudgetProvider"
 
 import NewBudgetForm from "./NewBudgetForm"
-import BudgetProvider from "../../context/budget/BudgetProvider"
 
 describe("Create a budget", () => {
   const setup = () => {

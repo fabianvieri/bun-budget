@@ -1,10 +1,10 @@
-import ModalButton from "../ui/ModalButton"
-import NewExpenseForm from "../expense/NewExpenseForm"
-import ExpenseList from "../expense/ExpenseList"
-import { Card, CardFooter, CardHeader, CardTitle } from "../ui/card"
-import { currencyFormatter } from "@/lib/utils"
-import { useBudget } from "@/context/budget/useBudget"
 import { UNCATEGORIZED_BUDGET_ID } from "@/context/budget"
+import { useBudget } from "@/context/budget/useBudget"
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import ModalButton from "@/components/ui/ModalButton"
+import ExpenseList from "@/components/expense/ExpenseList"
+import NewExpenseForm from "@/components/expense/NewExpenseForm"
+import { currencyFormatter } from "@/lib/utils"
 
 export default function UncategorizedBudgetItem() {
   const { budgets } = useBudget()
